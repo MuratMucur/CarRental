@@ -6,6 +6,7 @@ namespace CarRental
     {
         private string carModel;
         private string carTransmission;
+       
 
         public string CarModel
         {
@@ -26,13 +27,13 @@ namespace CarRental
         }
         public Car(string carmodel, string cartransmission)
         {
-            this.carModel=carmodel;
+            this.carModel = carmodel;
             this.carTransmission = cartransmission;
-          
+
         }
         public override string ToString()
         {
-            return $" Model:{carModel}, Race Time:{raceTime}"; ;
+            return $" Model:{carModel}, Transmission:{carTransmission}"; ;
         }
 
         //fields
@@ -59,4 +60,5 @@ namespace CarRental
         Luxury
     }
 
+  
 }
