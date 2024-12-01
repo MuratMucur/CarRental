@@ -19,14 +19,14 @@
             fuelConsumption = "";
         }
 
-        public EconomyCar(string fuelconsumption,string carmodel, string transmission) : base(carmodel, transmission) 
+        public EconomyCar(string carmodel, string transmission, string fuelconsumption) : base(carmodel, transmission) 
         {
-            this.fuelConsumption = fuelConsumption;
+            this.fuelConsumption = fuelconsumption;
         }
 
         public override string ToString()
         {
-            return $"Economy Car - Consumption:{fuelConsumption}, {base.ToString()}";
+            return $"Economy Car - {base.ToString()}, Consumption:{fuelConsumption}";
         }
         //override method
         public override double GetCost()
