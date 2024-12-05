@@ -15,7 +15,7 @@
         //Constructor
         public EconomyCar(): base()
         {
-            Description += ": Economy";
+            Description += ": Economy Car";
             fuelConsumption = "";
         }
 

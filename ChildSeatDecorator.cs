@@ -1,6 +1,6 @@
 ﻿namespace CarRental
 {
-    public class ChildSeatDecorator : Car
+    public class ChildSeatDecorator : CarDecorator
     {
         Car car;
         public ChildSeatDecorator(Car car)
@@ -12,6 +12,11 @@
         public override double GetCost()
         {
             return car.GetCost() + 20;
+        }
+
+        public override string GetDescription()
+        {
+            throw new NotImplementedException();
         }
     }
 }

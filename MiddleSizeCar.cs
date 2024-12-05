@@ -13,7 +13,7 @@
 
         public MiddleSizeCar() : base()
         {
-            Description += ": Middle Size";
+            Description += ": Middle Size Car";
             fuelConsumption = "";
         }
 

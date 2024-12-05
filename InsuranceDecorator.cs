@@ -6,7 +6,7 @@
         public InsuranceDecorator(Car car)
         {
             this.car = car;
-           
+            Description = $"{car.Description},full insurance selected";
         }
         public override double GetCost()
         {

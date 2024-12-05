@@ -14,7 +14,7 @@
         public LuxuryCar() : base()
         {
             Description += ": Luxury Car";
-            fuelConsumption = "";
+            fuelConsumption = "xx";
         }
 
         public LuxuryCar(string carmodel, string transmission, string fuelconsumption) : base(carmodel, transmission)
