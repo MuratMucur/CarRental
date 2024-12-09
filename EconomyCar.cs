@@ -3,31 +3,19 @@
     public class EconomyCar : Car
     {
 
-        private string fuelConsumption;
-        public string FuelConsumption
-        {
-
-            get { return fuelConsumption; }
-            set { fuelConsumption = value; }
-        }
-
 
         //Constructor
         public EconomyCar(): base()
         {
-            Description += ": Economy Car";
-            fuelConsumption = "";
+            Description = "Economy car";
+          
         }
 
-        public EconomyCar(string carmodel, string transmission, string fuelconsumption) : base(carmodel, transmission) 
+        public EconomyCar(string carmodel, string transmission, string fuelconsumption) : base(carmodel, transmission,fuelconsumption) 
         {
-            this.fuelConsumption = fuelconsumption;
+            Description = $"Economy Car: {carmodel}, {transmission}, {fuelconsumption}";
         }
 
-        public override string ToString()
-        {
-            return $"Economy Car - {base.ToString()}, Consumption:{fuelConsumption}";
-        }
         //override method
         public override double GetCost()
         {

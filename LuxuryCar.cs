@@ -3,29 +3,18 @@
     public class LuxuryCar : Car
     {
 
-        private string fuelConsumption;
-        public string FuelConsumption
-        {
-
-            get { return fuelConsumption; }
-            set { fuelConsumption = value; }
-        }
-
+       
         public LuxuryCar() : base()
         {
-            Description += ": Luxury Car";
-            fuelConsumption = "xx";
+            Description = ": Luxury Car";
+          
         }
 
-        public LuxuryCar(string carmodel, string transmission, string fuelconsumption) : base(carmodel, transmission)
+        public LuxuryCar(string carmodel, string transmission, string fuelconsumption) : base(carmodel, transmission, fuelconsumption)
         {
-            this.fuelConsumption = fuelconsumption;
+            Description = $"Luxury Car: {carmodel}, {transmission}, {fuelconsumption}";
         }
 
-        public override string ToString()
-        {
-            return $"Luxury Car - {base.ToString()}, Consumption:{fuelConsumption}";
-        }
 
      
         //override method
