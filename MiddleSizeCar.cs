@@ -3,8 +3,8 @@
     public class MiddleSizeCar : Car
     {
 
-        
 
+        // Constructor
         public MiddleSizeCar() : base()
         {
             Description += ": Middle Size Car";

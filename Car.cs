@@ -2,6 +2,7 @@
 
 namespace CarRental
 {
+    // Abstract class for a car
     public abstract class Car
     {
         private string carModel;
@@ -9,14 +10,14 @@ namespace CarRental
         private string fuelConsumption;
         private DateTime? startDate;
         private DateTime? endDate;
+
+       //properties
         public string FuelConsumption
         {
 
             get { return fuelConsumption; }
             set { fuelConsumption = value; }
         }
-
-
 
         public string CarModel
         {
@@ -39,6 +40,7 @@ namespace CarRental
             set { endDate = value; }
         }
 
+        //constructors
         public Car()
         {
             carModel = "";
@@ -57,6 +59,8 @@ namespace CarRental
 
 
         }
+
+        // ToString method for car details 
         public override string ToString()
         {
             return $" Model:{carModel}, Transmission:{carTransmission}, Fuel Consumption:{fuelConsumption}";
@@ -71,19 +75,23 @@ namespace CarRental
         set { description = value; }
 
         }
+
         public abstract double GetCost();
 
     }
-    public abstract class CarDecorator : Car
-    {
-        public abstract string GetDescription();
 
-    }
+    //enum for car types
     public enum CarType
     {
         Economy,
         MiddleSize,
         Luxury
+    }
+
+    public abstract class CarDecorator : Car
+    {
+        public abstract string GetDescription();
+
     }
 
   
